@@ -1,11 +1,11 @@
 # Minimalis Linux AArch64
 <h4>Install dependensi</h4>
-<p><pre>sudo apt install -y qemu-system-aarch64 gcc-aarch64-linux-gnu build-essential busybox cpio wget flex bison</pre></p>
+<p><pre>sudo apt install -y qemu-system-aarch64 gcc-aarch64-linux-gnu build-essential busybox cpio wget flex bison bc</pre></p>
 <h4>Cara bikinnya</h4>
 <ol>
 <li>Download kernel linux versi 6.6.6 (sesuai selera) <a href="https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.6.6.tar.xz">di sini</a></li>
 <li>Ekstrak pake perintah <code>tar -xvf linux-6.6.6.tar.xz</code></li>
-<li>Masuk ke direktori linux-6.6.6</li>
+<li>Masuk ke direktori <code>linux-6.6.6</code></li>
 <li>Terus ketik <pre>make ARCH=arm64 defconfig
 make -j$(nproc) ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- Image</pre>tunggu ampe selesai proses buildnya</li>
 <li>Kalo udah selesai, bikin <code>rootfs</code>, build <code>BusyBox</code><pre>cd .. 
